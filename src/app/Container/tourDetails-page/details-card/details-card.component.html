@@ -1,0 +1,51 @@
+<section id="tourDetails_details">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 column rounded-3">
+        <div class="twoColumns">
+          <div>
+            <div class="mb-3 text-capitalize">
+              <i class="fa-sharp fa-solid fa-location-dot pe-3 icon"></i>
+              {{ tourDetails?.location }}
+            </div>
+            <div class="mb-3">
+              <i class="fa-solid fa-clock pe-3 icon"></i
+              >{{ tourDetails?.duration }} days
+            </div>
+            <div
+              class="mb-3"
+              *ngIf="tourDetails?.carbon_neut == true; else trueBlock"
+            >
+              <i class="fa-solid fa-leaf pe-3 icon"></i>Carbon Neutrals
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-3" *ngIf="tourDetails?.food == true; else trueBlock">
+              <i class="fa-solid fa-pizza-slice pe-3 icon"></i>Food tour
+            </div>
+            <ng-template #trueBlock>
+              <div class="mb-3">
+                <i class="fa-solid fa-pizza-slice pe-3 icon"></i>No Food tour
+              </div>
+            </ng-template>
+            <div class="mb-3" *ngIf="tourDetails?.walk == true; else trueBlock">
+              <i class="fa-solid fa-person-walking pe-3 icon"></i>Walking tour
+            </div>
+
+            <div
+              class="mb-3"
+              *ngIf="tourDetails?.private == true; else trueBlock"
+            >
+              <i class="fa-solid fa-users pe-3 icon"></i>Private tours: Only you
+              and your host
+            </div>
+          </div>
+        </div>
+        <div class="included_details mt-4 text-center">
+          <span class="fw-bold">Including:</span>{{ tourDetails?.include }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

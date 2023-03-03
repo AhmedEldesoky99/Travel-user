@@ -1,0 +1,34 @@
+/*----------------- header section Start--------------- */
+#header {
+
+    background-image: url(../../../../assets/Images/home/Header.png);
+
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.form-control {
+    padding: 0.8rem 2rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.1rem var(--black-color);
+}
+
+
+
+.btn {
+    background-color: var(--red-color);
+    padding: 0.5rem 2rem;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(0, -50%);
+}
+
+.btn:hover {
+    background-color: #f14a44;
+}
+
+/*----------------- header section End--------------- */

@@ -1,0 +1,240 @@
+<!-- <p>user-payment works!</p> -->
+<section id="payment">
+  <div class="container mt-5">
+    <div class="row justify-content-evenly">
+      <div class="col-lg-8 col-md-7 order-md-1 order-sm-2">
+        <form [formGroup]="validationForm">
+          <div class="payMe mt-4">
+            <h3 class="mb-4">Payment Details</h3>
+            <select name="" id="countries">
+              <option value="">Credit or debit Card</option>
+              <option value="">Credit Card</option>
+              <option value="">Debit Card</option>
+            </select>
+
+            <table class="table table-bordered payMe-table mt-3">
+              <!-- <thead>
+              <tr colspan="2">
+                <th class="text-center">
+                  #
+                </th>
+                
+              </tr>
+            </thead> -->
+              <tbody class="paymeTable rounded-3">
+                <tr>
+                  <td colspan="2">CardNumber</td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div>
+                      <input
+                        formControlName="CardNumber"
+                        type="text"
+                        name="name[]"
+                        placeholder="•••• •••• ••••"
+                        class="form-control no-border"
+                      />
+                      <div
+                        *ngIf="
+                          !flag ||
+                          (!CardNumberValid &&
+                            this.validationForm.value['CardNumber'])
+                        "
+                        class="alert alert-danger my-1"
+                        role="alert"
+                      >
+                        Wrong card number
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">Expiration</td>
+                  <td colspan="1">CVV</td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <div>
+                      <input
+                        formControlName="Expiration"
+                        type="teL"
+                        name="name[]"
+                        placeholder="•• / ••••"
+                        class="form-control no-border"
+                      />
+                      <div
+                        *ngIf="
+                          !flag ||
+                          (!ExpirationValid &&
+                            this.validationForm.value['Expiration'])
+                        "
+                        class="alert alert-danger my-1"
+                        role="alert"
+                      >
+                        Wrong card number
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <input
+                        formControlName="cvv"
+                        type="tel"
+                        name="cvv"
+                        placeholder="•••"
+                        class="form-control no-border"
+                      />
+                      <div
+                        *ngIf="
+                          !flag ||
+                          (!cvvValid && this.validationForm.value['cvv'])
+                        "
+                        class="alert alert-danger my-1"
+                        role="alert"
+                      >
+                        Wrong cvv must be 3 numbers
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="billingAddres mt-4 mb-4">
+            <h3 class="mb-4">Billing Addres</h3>
+            <table class="table table-bordered billingAddres-table">
+              <!-- <thead>
+              <tr colspan="2">
+                <th class="text-center">
+                  #
+                </th>
+                
+              </tr>
+            </thead> -->
+              <tbody>
+                <tr>
+                  <td colspan="2">
+                    <input
+                      type="text"
+                      name="name[]"
+                      placeholder="Street adress "
+                      class="form-control no-border"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input
+                      type="number"
+                      name="name[]"
+                      placeholder="Apt or suite number"
+                      class="form-control no-border"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input
+                      type="text"
+                      name="name[]"
+                      placeholder="city"
+                      class="form-control no-border"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <input
+                      type="text"
+                      name="name[]"
+                      placeholder="state"
+                      class="form-control no-border"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      name="name[]"
+                      placeholder="ZIP code"
+                      class="form-control no-border"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <select name="" id="countries" class="mb-1">
+            <option value="">Pick governorate</option>
+            <option value="">Ismailia</option>
+            <option value="">Alexandria</option>
+            <option value="">Luxor</option>
+            <option value="">PortSaid</option>
+          </select>
+
+          <a href="#" class="mt-2">Enter a coupon</a>
+          <hr />
+          <div>
+            <h3>Cancellation Policy</h3>
+            <p>
+              Partial refund :Get back every night that remains 24 hours after
+              you cancel. No refund of nights you spent or the service fee.
+            </p>
+          </div>
+          <hr />
+          <div class="notes">
+            <div><i class="fa-regular fa-note-sticky"></i></div>
+            <div>
+              <p>
+                your reservation won't be confirmed until the Host accepts your
+                request(within 24 hours)
+              </p>
+              <p>You won't be charged until then</p>
+            </div>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-center mb-5">
+            <a class="btn btn-request" href="#">Request to book</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-sm-12 order-md-2 order-sm-1 mb-4">
+        <div class="payment-card">
+          <div class="payment-card-tourDetails">
+            <div class="payment-card-img w-100">
+              <img
+                src="../../../assets/Images/cards/alexandria-3.jpg"
+                class="w-100"
+                alt=""
+              />
+            </div>
+            <div>
+              <p class="mt-3">Alexandria | 8 days</p>
+              <h5 class="fw-bold">Nature and Culture of Alexandria</h5>
+              <p>Thursday,February 9,2023 | 9:00 AM</p>
+            </div>
+          </div>
+          <hr />
+          <div class="payment-card-priceDetails">
+            <div>
+              <p>Booking Fee</p>
+              <p>Subtotal</p>
+            </div>
+            <div>
+              <p>EGP 0.00</p>
+              <p>EGP7,172.96</p>
+            </div>
+          </div>
+          <pre></pre>
+          <hr />
+          <div class="payment-card-priceTotal">
+            <p>Total(EGP)</p>
+            <p>EGP7,172.96</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

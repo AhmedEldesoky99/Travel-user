@@ -1,0 +1,147 @@
+#footer {
+  background-color: #272727;
+  margin-top: 100px;
+  color: var(--white-color);
+}
+
+#footer hr {
+  color: var(--lightgray-color);
+  opacity: 1;
+}
+
+.footer-ul {
+  list-style: none;
+}
+
+.footer-ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-ul li a:hover {
+  color: var(--yellow-color);
+}
+
+.footer-connect {
+  position: relative;
+}
+
+.footer-connect::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  top: 50%;
+  left: 13%;
+  background-color: var(--lightgray-color);
+  display: block;
+}
+
+.footer-connect::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  top: 50%;
+  right: 13%;
+  background-color: var(--lightgray-color);
+  display: block;
+}
+
+.socialMedia > i {
+  font-size: 23px;
+  margin-right: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.socialMedia i:hover {
+  transform: scale(1.1);
+}
+
+.footer-logo {
+  translate: 7.8rem -2.2rem;
+}
+
+.middle-section {
+  translate: 0 -5rem;
+  margin-bottom: -5rem;
+}
+
+.top-bottom {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--red-color);
+
+}
+
+.top-bottom i{
+  font-size: 25px;
+}
+
+.to-top {
+  bottom: 0;
+  cursor: pointer;
+  margin: 0 8px 12px 0;
+  position: fixed;
+  right: 0;
+}
+
+.show-scrolltop {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 412px) {
+  .footer-connect {
+    margin: 0 2rem;
+    margin-bottom: 0.2rem;
+  }
+  .footer-logo {
+    translate: 6rem 0 !important;
+    margin-bottom: -24px;
+  }
+
+  .footer-connect::before,
+  .footer-connect::after {
+    display: none;
+  }
+
+  .middle-section {
+    translate: 0 0rem;
+    margin-bottom: 0rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-logo {
+    translate: 2rem 1rem;
+    width: 180px !important;
+  }
+  .footer-connect::before,
+  .footer-connect::after {
+    display: none;
+  }
+}
+
+/* .socialMedia i:nth-child(1) {
+  color: var(--fb-color);
+}
+
+.socialMedia i:nth-child(2) {
+  background: linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+/* 
+.socialMedia i:nth-child(3) {
+  color: #ff0000;
+}
+
+.socialMedia i:nth-child(4) {
+  color: #1d9bf0;
+} */

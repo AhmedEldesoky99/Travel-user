@@ -1,0 +1,126 @@
+<section id="comments">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="be-comment-block">
+          <h1 class="comments-title">Comments ({{ comments?.length }})</h1>
+          <!-- display comments -->
+          <div class="be-comment" *ngFor="let comment of comments">
+            <div class="be-img-comment">
+              <a href="blog-detail-2.html">
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                  alt=""
+                  class="be-ava-comment"
+                />
+              </a>
+            </div>
+            <div class="be-comment-content">
+              <span class="be-comment-name">
+                <a href="blog-detail-2.html">{{ comment?.user?.username }}</a>
+              </span>
+              <span class="be-comment-time">
+                <i class="fa fa-clock-o"></i>
+                May 27, 2015 at 3:14am
+              </span>
+
+              <p class="be-comment-text">
+                {{ comment?.content }}
+              </p>
+              <span class="delete"
+                (click)="deleteComment()"
+                *ngIf="authService.isAuth || logInStatus"
+                >delete</span
+              >
+            </div>
+          </div>
+
+          <!-- add new comment -->
+          <form *ngIf="authService.isAuth || logInStatus">
+            <div class="d-flex justify-content-between mt-5">
+              <h5 class="">New Comment</h5>
+              <button (click)="addComment()" class="btn btn-primary pull-right">
+                Submit
+              </button>
+            </div>
+            <fieldset>
+              <div class="row">
+                <div class="be-comment mt-3">
+                  <div class="be-img-comment">
+                    <a href="blog-detail-2.html">
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                        alt=""
+                        class="be-ava-comment"
+                      />
+                    </a>
+                  </div>
+                  <div class="be-comment-content">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="be-comment-name">
+                        <a href="blog-detail-2.html">Phoenix the profile</a>
+                      </div>
+
+                      <!------------ rating ------------>
+                      <div class="stars">
+                        <input
+                          class="star star-5"
+                          id="star-5-2"
+                          type="radio"
+                          name="star"
+                        />
+                        <label class="star star-5" for="star-5-2"></label>
+                        <input
+                          class="star star-4"
+                          id="star-4-2"
+                          type="radio"
+                          name="star"
+                        />
+                        <label class="star star-4" for="star-4-2"></label>
+                        <input
+                          class="star star-3"
+                          id="star-3-2"
+                          type="radio"
+                          name="star"
+                        />
+                        <label class="star star-3" for="star-3-2"></label>
+                        <input
+                          class="star star-2"
+                          id="star-2-2"
+                          type="radio"
+                          name="star"
+                        />
+                        <label class="star star-2" for="star-2-2"></label>
+                        <input
+                          class="star star-1"
+                          id="star-1-2"
+                          type="radio"
+                          name="star"
+                        />
+                        <label class="star star-1" for="star-1-2"></label>
+                      </div>
+                    </div>
+
+                    <!------------ textarea comment ------------>
+                    <div class="form-group col-xs-12 col-sm-9 col-lg-12">
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        placeholder="Your message"
+                        name="textarea comment"
+                        required=""
+                        [(ngModel)]="commentValue"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

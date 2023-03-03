@@ -1,0 +1,82 @@
+
+/* Hager variables
+--fontFamily : "Inter";
+--fs-xl:3.8rem;
+--fs-lg:3rem;
+--fs-md:1.4rem;
+--fs-s-md:1.3rem;
+--pt:8rem;
+--pt-s:4rem;
+--pt-xs:2rem;
+--white-color:#fff;
+--light-gray:#3c3a3a;
+--baby-blue :#009EB7;
+--baby-blue-hover :#048599;
+--full-viewPort :100vh;
+--text-captalized: capitalize;
+--text-centered: center; */
+#tourDetails_details {
+/* min-height: 50vh; */
+--pt:8rem;
+--pt-s:5rem;
+--pt-xs:2rem;
+--fs-s-md:1rem;
+
+}
+.container .row {
+    color: var(--white-color);
+    /* width: 67%; */
+    font-size: var(--fs-s-md);
+    font-family: var(--fontFamily);
+}
+.twoColumns {
+    display: flex;
+    /* gap: 4; */
+    justify-content: space-evenly;
+}
+.column {
+    background-color: var( --black-color);
+    padding: var(--pt-s) 0rem;
+
+}
+.included_details > span {
+    color: var(--yellow-color);
+}
+.icon {
+    transition: 0.4s ease-in-out;
+}
+.icon:hover {
+    color: var(--yellow-color);
+    cursor: pointer;
+}
+
+@media(max-width:550px)
+{
+    .twoColumns {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media(min-width:769px) and (max-width:992px)
+{
+   
+    
+}
+
+/*large screen as laptop*/
+@media (max-width:1100px)
+{
+    .card {
+        border: 2px solid red;
+        height: 60%;
+    }
+}
+@media (max-width:1400px) {
+    .card {
+        position:static;
+        margin-top: 8rem;
+        /* height: 50%; */
+        /* top: 20rem; */
+    }
+}

@@ -1,0 +1,213 @@
+<section id="userProfileHeader">
+  <div class="userProfileBg">
+    <img 
+    class="w-100"
+    src="{{ editedUser?.cover_photo[0]?.url }}" alt="" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        <div class="userCard">
+          
+          <div class="card profileCard">
+            <div class="card-body px-4">
+              <div class="userProfile__img">
+                <div *ngIf="!editedUser?.photo[0]?.url">
+                  <img
+                    src="../../../../assets/Images/admin profile/istockphoto-1337144146-170667a.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </div>
+                <img
+                  *ngIf="editedUser?.photo[0]?.url"
+                  src="{{ editedUser?.photo[0]?.url }}"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+
+              <h3 class="card-title nameTitle text-capitalize">
+                {{ editedUser?.username }}
+              </h3>
+              <p class="card-text">Member Since 3/1/2023</p>
+              <!-- <p class="card-text">Email Verfied</p> -->
+              <p class="card-text">{{ editedUser?.city }}</p>
+              <p class="card-text">Phone: {{ editedUser?.phone }}</p>
+              <div class="d-flex flex-column">
+                <a
+                  routerLink="/logIn"
+                  class="btn btn-primary Contact__btn mt-4 px-3"
+                  >Contanct me</a
+                >
+                <div
+                  class="btn btn-outline-info editBtn mt-2 px-3"
+                  (click)="open(content)"
+                >
+                  Edit Info
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-sm-12 mt-5">
+        <!-- <div class=" text-center">
+          <img
+            *ngIf="isLoading"
+            src="../../../../assets/Images/loading/Spinner-1.5s-200px.svg"
+            alt=""
+          />
+        </div> -->
+        <div class="card aboutCard d-flex py-2">
+          <h5 class="card-header aboutMeTitle">About me</h5>
+
+          <div class="card-body">
+            <div class="card-body py-4">
+              <h5 class="card-title">Bio</h5>
+              <p class="card-text">
+                {{ editedUser?.bio }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #content let-modal>
+    <div class="modal-header mt-5">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="validationForm">
+        <div class="mb-3">
+          <label for="name">User Name</label>
+          <div class="input-group">
+            <input
+              id="username"
+              class="form-control"
+              placeholder="name"
+              name="username"
+              formControlName="username"
+              type="text"
+              value="{{ editedUser?.username }}"
+            />
+            <div
+              *ngIf="
+                !flag || (!nameValid && this.validationForm.value['username'])
+              "
+              class="alert alert-danger my-1"
+              role="alert"
+            >
+              Name must be characters only
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="city">city</label>
+          <div class="input-group">
+            <input
+              id="city"
+              formControlName="city"
+              class="form-control"
+              placeholder="city"
+              name="city"
+              type="text"
+              value="{{ editedUser?.city }}"
+            />
+            <div
+              *ngIf="!flag || (!nameValid && this.validationForm.value['city'])"
+              class="alert alert-danger my-1"
+              role="alert"
+            >
+              City must be characters only
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="phone">Phone</label>
+          <div class="input-group">
+            <input
+              id="phone"
+              formControlName="phone"
+              class="form-control"
+              placeholder="phone"
+              name="phone"
+              type="tel"
+              value="{{ editedUser?.phone }}"
+            />
+            <div
+              *ngIf="
+                !flag || (!phoneValid && this.validationForm.value['phone'])
+              "
+              class="alert alert-danger my-1"
+              role="alert"
+            >
+              Phone must be 11 digits
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="bio">Bio</label>
+          <div class="input-group">
+            <input
+              id="bio"
+              formControlName="bio"
+              class="form-control"
+              placeholder="bio"
+              name="bio"
+              type="text"
+              value="editedUser?.bio"
+            />
+            <div
+              *ngIf="!flag || (!bioValid && this.validationForm.value['bio'])"
+              class="alert alert-danger my-1"
+              role="alert"
+            >
+              Name must be characters only
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="Profile image">Profile image</label>
+          <div class="input-group">
+            <input
+              id="Profile image"
+              class="form-control"
+              type="file"
+              (change)="handlePhotoInput($event)"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="Background image">Background image</label>
+          <div class="input-group">
+            <input
+              id="Background image"
+              class="form-control"
+              type="file"
+              (change)="handleCoverPhotoInput($event)"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="submit"
+        class="btn btn-outline-dark"
+        (click)="updateProfile()"
+        (click)="checkForm()"
+        (click)="modal.close('Save click')"
+      >
+        Save
+      </button>
+    </div>
+  </ng-template>
+</section>

@@ -1,0 +1,61 @@
+/*----------------- destination card Start--------------- */
+.destination-card {
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.destination-card img {
+  height: 25vw;
+  object-fit: cover;
+}
+
+.destination-card img,
+.overlay {
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.destination-card:hover img,
+.destination-card:hover .overlay {
+  transform: scale(1.1);
+  border-radius: 20px;
+}
+
+.overlay {
+  background-color: rgba(102, 101, 101, 0.29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-caption hr {
+  width: 100%;
+  margin: 0.5rem auto;
+  opacity: 1;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .destination-card img {
+    height: 100vw;
+    object-fit: cover;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .destination-card img {
+    height: 80vw;
+    object-fit: cover;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .destination-card img {
+    height: 50vw;
+    object-fit: cover;
+  }
+}
+/*----------------- destination card End--------------- */

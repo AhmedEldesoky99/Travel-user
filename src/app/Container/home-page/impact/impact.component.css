@@ -1,0 +1,37 @@
+/*----------------- Impact section Start--------------- */
+
+#impact {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 40px 0px;
+}
+
+#impact span {
+    color: var(--yellow-color);
+}
+
+.impact-caption hr {
+    width: 30%;
+    margin: 1rem auto;
+}
+
+.impact-details i {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.impact-details i:hover {
+    color: var(--yellow-color);
+    transform: scale(1.1);
+}
+
+.impact-details span {
+    font-size: 48px;
+
+}
+
+.row-second {
+    margin-top: 40px;
+}
+
+/*----------------- Impact section End--------------- */

@@ -1,0 +1,16 @@
+/*----------------- Popular-Destinations section Start--------------- */
+
+#popular-dest {
+    margin: 80px 0px;
+}
+
+.popular-dest-caption hr {
+    width: 35%;
+    margin: 1rem auto;
+}
+
+.row-second {
+    margin-top: 40px;
+}
+
+/*----------------- Popular-Destinations section End--------------- */

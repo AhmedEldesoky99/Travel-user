@@ -1,0 +1,78 @@
+<section id="addToCart">
+  <!-- change tours.length -->
+  <div
+    class="container mt-5 d-flex justify-content-evenly"
+    *ngIf="addtours.length != 0; else trueblock"
+  >
+    <div class="container mt-5 d-flex justify-content-evenly">
+      <div class="row justify-content-evenly row-card">
+        <!-- <div class=" text-center">
+        <img
+          *ngIf="isLoading"
+          src="../../../assets/Images/loading/Spinner-1.5s-200px.svg"
+          alt=""
+        />
+      </div> -->
+        <div
+          *ngFor="let addtour of addtours"
+          class="col-lg-5 col-md-8 cardsContainer mb-3"
+        >
+          <app-add-to-cart-card [addtour]="addtour"></app-add-to-cart-card>
+        </div>
+      </div>
+
+      <div class="reviewOrder-card col-sm-8 border rounded shadow-sm">
+        <h4>Review Order Details</h4>
+        <div class="reviewOrder-card-details mt-4">
+          <div>
+            <p>Booking Fee</p>
+            <p>Subtotal</p>
+          </div>
+          <div>
+            <p>EGP 0</p>
+            <div *ngFor="let price of addtours">
+              <p>EGP{{ price?.data?.person_cost }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="fw-bold mt-2 mb-2">Total</p>
+          <p class="fw-bold mt-2 mb-2">
+            EGP {{ addedToCartTours.total_money }}
+          </p>
+        </div>
+        <p class="text">no additional taxes & fees</p>
+        <div class="btn-checkOut-container">
+          <!-- <a
+          class="btn-checkOut text-center text-decoration-none"
+          
+          (click)="checkout()"
+          >Checkout</a
+        > -->
+          <a
+            class="btn-checkOut text-center text-decoration-none"
+            (click)="checkout()"
+            >Checkout</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #trueblock>
+    <div class="cont mt-5">
+      <div class="text-center">
+        <div class="center">
+          <img
+            width="w-25"
+            src="../../../assets/Images/empty cart/6b08e1996ba73f0e77b209aa31301406.jpg"
+            alt=""
+          />
+          <h4>Your cart is empty!</h4>
+          <h6>Add item to it now</h6>
+          <button routerLink="/" class="btn">Explore Tours</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</section>

@@ -1,0 +1,16 @@
+<!-- ----------------- destination card Start---------------  -->
+
+<a routerLink="eachGov/{{ destination?.caption }} ">
+  <div class="destination-card position-relative">
+    <img src="{{ destination?.src }}" class="w-100" alt="" />
+    <div class="overlay position-absolute top-0 w-100 h-100">
+      <div class="overlay-caption text-white text-center">
+        <h3 class="text-capitalize">{{ destination?.caption }}</h3>
+        <hr />
+        <p class="text-capitalize">History of Egypt</p>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- ----------------- destination card End--------------- -->

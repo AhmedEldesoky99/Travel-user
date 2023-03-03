@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Manrope:wght@300&family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-color: #272727;
+  --white-color: #fff;
+  --yellow-color: #ffc857;
+  --blue-color: #009fb7;
+  --gray-color: #696773;
+  --lightgray-color: #e0e0e0;
+  --red-color: #db3a34;
+  --fb-color: #1877f2;
+
+}

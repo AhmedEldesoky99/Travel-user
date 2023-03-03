@@ -1,0 +1,7 @@
+.error-img {
+  height: 100vh;
+  background-image: url("../../../assets/Images/error/404-errors.png");
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+}

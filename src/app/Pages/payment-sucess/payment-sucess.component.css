@@ -1,0 +1,51 @@
+.container {
+  /* margin-top: 5rem; */
+  height: 100vh;
+}
+
+/* .ticket {
+  padding: 50px;
+} */
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  /* padding: 10px; */
+  background: var(--yellow-color);
+  color: #000;
+  text-align: center;
+  font: 32px Arial, sans-serif;
+}
+
+.circle i {
+  color: white;
+}
+
+.btn {
+  background-color: var(--yellow-color);
+  color: white;
+}
+
+.btn-outline {
+  background-color: white;
+  border: 1px solid var(--yellow-color);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--yellow-color);
+}
+
+.btn:hover {
+  background-color: #febc39;
+  color: white;
+}
+
+.btn-outline:hover {
+  background-color: #febc39;
+  color: white;
+}
+
+@media (max-width: 550px) {
+  .sucess-img img {
+    display: none;
+  }
+}

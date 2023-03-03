@@ -1,0 +1,15 @@
+<app-tour-details-slider [tourDetails]="tourDetails"></app-tour-details-slider>
+<app-details-card [tourDetails]="tourDetails"></app-details-card>
+<app-reasons-to-book [resons]="resons"></app-reasons-to-book>
+<app-food-slider [foodPhotos]="foodPhotos"></app-food-slider>
+<app-this-is-the-plan [plan]="plan"></app-this-is-the-plan>
+<app-where-to-meet></app-where-to-meet>
+<app-traveler-tips></app-traveler-tips>
+<app-comments [comments]="comments"></app-comments>
+<div class="col-lg-8 text-center">
+  <img
+    *ngIf="isLoading"
+    src="../../../assets/Images/loading/Spinner-1.5s-200px.svg"
+    alt=""
+  />
+</div>

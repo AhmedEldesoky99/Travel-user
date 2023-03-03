@@ -1,0 +1,73 @@
+/*************aboutUs__whyBookWithUs**********/
+
+#aboutUs__whyBook {
+  --fontFamily: "Inter";
+  --full-viewPort: 100vh;
+  --baby-blue: #009eb7;
+  --baby-blue-hover: #048599;
+  --pt-xs: 2rem;
+  min-height: var(--full-viewPort);
+  color: var(--light-gray);
+}
+.fa-solid {
+  color: var(--baby-blue);
+  padding: var(--pt-xs) 0px;
+}
+.fa-solid:hover {
+  color: var(--baby-blue-hover);
+  cursor: pointer;
+}
+
+.aboutUs__whyBook h2 {
+  font-size: 3rem !important;
+  text-transform: var(--text-captalized);
+}
+
+@media (max-width: 412px) {
+  .about__card {
+    width: 100% !important;
+  }
+  .aboutUs__whyBook h2 {
+    font-size: 2rem !important;
+  }
+}
+/*mobile screen*/
+/* less than 768px */
+@media (max-width: 768px) {
+  .about__card {
+    width: 70%;
+    --pt-xs: 2rem;
+    padding-top: var(--pt-xs);
+  }
+  #aboutUs__whyBook {
+    gap: 0 !important;
+  }
+  .row__responsive {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .about__card {
+    width: 80%;
+    --pt-xs: 2rem;
+    padding-top: var(--pt-xs);
+  }
+  #aboutUs__whyBook {
+    gap: 0 !important;
+  }
+}
+
+/*large screen as laptop*/
+@media (min-width: 993px) and (max-width: 1200px) {
+  .about__card {
+    width: 90%;
+    --pt-xs: 2rem;
+    padding-top: var(--pt-xs);
+
+    /* padding-top: var(--pt-xs); */
+  }
+  #aboutUs__whyBook {
+    gap: 0 !important;
+  }
+}

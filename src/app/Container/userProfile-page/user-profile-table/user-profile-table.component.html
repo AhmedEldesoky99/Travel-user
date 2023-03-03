@@ -1,0 +1,42 @@
+<section id="table" class="my-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="btn btn-danger">Bookings</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Status</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let table of Table; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>
+                {{ table.name }}
+              </td>
+              <td>
+                {{ table.status }}
+              </td>
+              <td>
+                {{ table.date }}
+              </td>
+              <td>
+                <img
+                [src]="'' + table.delete"
+                class="me-2 icon"
+                style="width: 15px"
+              />
+            </td>
+            
+             </tr>
+          </tbody>
+        </table>
+       
+      </div>
+    </div>
+  </div>
+</section>

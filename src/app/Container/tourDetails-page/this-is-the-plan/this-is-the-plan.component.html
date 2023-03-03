@@ -1,0 +1,51 @@
+<section id="thePlan">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 mt-4">
+        <h2 class="thePlan_title fw-bold">This is the plan</h2>
+        <p class="description">
+          Check out the plan below to see what you'll get up to with your local
+          host.Feel free to personalize this offer.
+        </p>
+      </div>
+
+      <div class="row mt-3 details">
+        <div class="d-flex align-items-center">
+          <div>
+            <i class="fa-solid fa-location-dot me-3 location_icon icon"></i>
+          </div>
+          <h4 class="fw-bold">Meeting point</h4>
+        </div>
+        <span class="ms-4">{{ plan?.meeting_point }}</span>
+      </div>
+      <div class="row mt-5 details">
+        <div class="d-flex align-items-center">
+          <div><i class="fa-sharp fa-solid fa-circle-dot me-3 icon"></i></div>
+          <h4 class="fw-bold">City Highlights</h4>
+        </div>
+        <span class="ms-4">{{ plan?.city_highlights }}</span>
+      </div>
+      <div class="row mt-5 details">
+        <div class="d-flex align-items-center">
+          <div><i class="fa-sharp fa-solid fa-circle-dot me-3 icon"></i></div>
+          <h4 class="fw-bold">Hidden Gems</h4>
+        </div>
+        <span class="ms-4">{{ plan?.hidden_gems }}</span>
+      </div>
+      <div class="row mt-5 details">
+        <div class="d-flex align-items-center">
+          <div><i class="fa-sharp fa-solid fa-circle-dot me-3 icon"></i></div>
+          <h4 class="fw-bold">Magical Storytelling</h4>
+        </div>
+        <span class="ms-4">{{ plan?.magical_storytelling }}</span>
+      </div>
+      <div class="row mt-5 details">
+        <div class="d-flex align-items-center">
+          <div><i class="fa-sharp fa-solid fa-circle-dot me-3 icon"></i></div>
+          <h4 class="fw-bold">Special Treat</h4>
+        </div>
+        <span class="ms-4">{{ plan?.special_treat }}</span>
+      </div>
+    </div>
+  </div>
+</section>

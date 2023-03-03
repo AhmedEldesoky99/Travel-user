@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container-fluid ">
+    <!-- <a class="" href="#"
+      ></a> -->
+    <img class="logo" src="../../../../assets/Images/loogo/logo.png" alt="" />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dest">Destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutUs">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/joinUs">Join us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mt-3 icons">
+        <li class="nav-item" *ngIf="authService.isAuth || logInStatus">
+          <a class="nav-link cart" aria-current="page" routerLink="/addToCart"
+            ><i class="fa-solid fa-cart-flatbed-suitcase"></i
+          ></a>
+          <div
+            class="counter d-flex justify-content-center align-items-center fw-bold"
+          >
+          {{cartItems}}
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/userprofile"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+        </li>
+        <li>
+          <div ngbDropdown class="d-inline-block">
+            <button
+              type="button"
+              class="btn"
+              id="dropdownBasic1"
+              ngbDropdownToggle
+            ></button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a routerLink="/logIn">
+                <button class="dropdownItem" ngbDropdownItem>log in</button></a
+              >
+              <a routerLink="/signUp">
+                <button class="dropdownItem" ngbDropdownItem>sign up</button></a
+              >
+            </div>
+          </div>
+        </li>
+        <li
+          class="nav-item d-flex justify-content-center aign-items-center"
+          *ngIf="authService.isAuth || logInStatus"
+        >
+          <a class="nav-link" (click)="logOut()">log out</a>
+        </li>
+      </ul>
+
+      <!-- <span class="navbar-text"> <i class="fa-solid fa-user"></i></span> -->
+    </div>
+  </div>
+</nav>

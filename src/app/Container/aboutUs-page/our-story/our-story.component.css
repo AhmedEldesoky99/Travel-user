@@ -1,0 +1,46 @@
+/**** aboutUs __ secondSection ****/
+
+#aboutUs__ourStory {
+    --fontFamily : "Inter";
+    --full-viewPort :100vh;
+    min-height: var(--full-viewPort);
+    --fs-lg:3rem;
+    --fs-s-md:1.3rem;
+    --text-captalized: capitalize;
+    --light-gray:#3c3a3a;
+    --baby-blue :#009EB7;
+}
+.aboutUs__ourStoryTitle > h2 {
+    font-size: var(--fs-lg);
+    text-transform: var(--text-captalized);
+}
+.ourStory p {
+    font-size: var(--fs-s-md);
+    color: var(--light-gray)
+}
+ #aboutUs__city p {
+    font-size: var(--fs-s-md);
+    color: var(--light-gray)
+} 
+.aboutUs__ourCityTitle {
+    font-size: var(--fs-lg);
+    text-transform: var(--text-captalized);
+}
+.aboutUs__ourCity > p {
+  color : var(--baby-blue) !important;
+}
+.line hr {
+    width: 16%;
+}
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vl {
+    border-left: 4px solid var(--baby-blue);
+    height: 4rem;
+  }
+
+  

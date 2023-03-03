@@ -1,0 +1,85 @@
+<div id="bookCard">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 order-md-2 order-sm-1">
+        <div class="card shadow px-2" style="width: 22rem">
+          <div class="card-body px-3">
+            <div class="d-flex mb-4 mt-3">
+              <a href="#" class="btn btn-primary sellBtn rounded-pill px-5"
+                >Likely to sell out</a
+              >
+            </div>
+            <div>
+              <span class="fw-bold">{{ tourDetails?.person_cost }}</span> per
+              person
+              <br />
+              <div>
+                <i class="fa-solid fa-star stars"></i>
+                <i class="fa-solid fa-star stars"></i>
+                <i class="fa-solid fa-star stars"> </i
+                ><i class="fa-solid fa-star stars"></i>
+                <i class="fa-regular fa-star stars"></i>
+              </div>
+              <form action="/" method="post">
+                <div class="d-flex flex-column gap 3">
+                  <input
+                    type="text"
+                    class="my-2 mt-4 py-2 mb-3"
+                    name="date"
+                    style="padding: 6px"
+                    required
+                    disabled
+                    value="Date: {{ tourDetails?.start_date.split('T')[0] }}"
+                  />
+                  <input
+                    type="text"
+                    class="mb-2 py-2 mb-3"
+                    name="time"
+                    style="padding: 6px"
+                    required
+                    disabled
+                    value="Time: {{ tourDetails?.start_date.split('T')[1] }}"
+                  />
+                  <input
+                    type="number"
+                    class="mb-4 py-2 mb-3"
+                    name="adultsCount"
+                    placeholder="Adults"
+                    style="padding: 6px"
+                    required
+                    value="1"
+                    [(ngModel)]="adultsCountNum"
+                  />
+                </div>
+              </form>
+
+              <div class="btns d-flex flex-column">
+                <div class="mt-4">
+                  <span
+                    class="btn btn-outline-primary mb-2 addToCart_btn w-100 text-capitalize fw-bold"
+                    (click)="addTourToCart()"
+                    >add to cart</span
+                  >
+                </div>
+                <div>
+                  <a
+                    (click)="checkout()"
+                    class="btn btn-primary book_btn w-100 mb-3 text-capitalize fw-bold"
+                    >Book now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="col-lg-12 text-center">
+  <img
+    *ngIf="isLoading"
+    src="../../../assets/Images/loading/Spinner-1.5s-200px.svg"
+    alt=""
+  />
+</div> -->

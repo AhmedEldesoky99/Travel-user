@@ -1,0 +1,72 @@
+  /********* aboutUs __ firstSection********/
+
+  #aboutUs {
+    --full-viewPort :100vh;
+    --pt:8rem;
+    min-height: var(--full-viewPort);
+    background-image: url(../../../../assets/Images/aboutUs/pexels-yasir-gürbüz-13592068.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #464646;
+}
+
+#aboutUs .container
+{
+    display: grid; 
+    grid-template-columns: 1.7fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas: ". . ."; 
+    padding-top: var(--pt);
+}
+
+.aboutUs__vision{
+    font-family: var(--fontFamily);
+    --white-color:#fff;
+    --fs-xl:3.8rem;
+    --fs-md:1.4rem;
+    --text-captalized: capitalize;
+}
+ 
+.aboutUs__title {
+    font-size: var(--fs-xl);
+    text-transform: var(--text-captalized);
+    color : var(--white-color);
+}
+.aboutUs__descrp {
+    font-size: var(--fs-md);
+    color : var(--white-color);
+}
+
+/******************************/
+
+/*mobile screen*/
+/* less than 768px */
+@media(max-width:768px)
+{
+    #aboutUs .container
+    {
+        grid-template-columns: 1fr ; 
+
+    }
+    .aboutUs__title {
+        --fs-lg:3rem;
+        font-size: var(--fs-lg);
+    }
+    
+}
+
+/*ipad screen*/
+/* more than 769px and less than 992px */
+@media(min-width:769px) and (max-width:992px)
+{
+    #aboutUs .container    {
+        grid-template-columns: 1fr 1fr ; 
+    }
+    .aboutUs__title {
+        --fs-lg:3rem;
+        font-size: var(--fs-lg);
+    }
+    
+    
+}

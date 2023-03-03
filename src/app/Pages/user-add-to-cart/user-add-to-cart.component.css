@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
+#addToCart {
+  margin-top: 100px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row-card {
+  width: 80%;
+}
+
+/*-------------- Review Order card -------------*/
+
+.reviewOrder-card {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 25%;
+  height: fit-content;
+  position: sticky;
+  top: 15%;
+}
+
+.reviewOrder-card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewOrder-card-details p {
+  margin-bottom: 0.3rem;
+}
+
+.reviewOrder-card-details .text {
+  color: var(--lightgray-color);
+}
+
+.btn-checkOut-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-checkOut {
+  background-color: var(--blue-color);
+  width: 100%;
+  padding: 8px 30px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.4s;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.btn-checkOut:hover {
+  cursor: pointer;
+  background-color: rgba(0, 158, 183, 0.8);
+  color: #fff;
+  font-weight: 800px;
+}
+
+@media (max-width: 991px) {
+  .cardsContainer {
+    width: 80%;
+  }
+  .reviewOrder-card {
+    width: 35%;
+  }
+}
+
+@media (max-width: 769px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .cardsContainer {
+    width: 90%;
+  }
+  .reviewOrder-card {
+    width: 70%;
+  }
+}
+
+/*-------------- end of Review Order card -------------*/

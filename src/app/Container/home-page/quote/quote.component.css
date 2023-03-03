@@ -1,0 +1,26 @@
+/*---------------- Quote Section Start --------------- */
+
+#quote {
+    margin: 80px 0px;
+}
+
+.quote-img {
+    background-image: url(../../../../assets/Images/home/Camel.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.quote-caption {
+    height: fit-content;
+    padding: 20px 0px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*---------------- Quote Section End --------------- */

@@ -1,0 +1,73 @@
+<section id="travelerTips">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <hr class="my-5">
+        <div class="card py-4">
+          <h2 class="card-header bg-transparent fw-bold p-4">Traveler tips</h2>
+          <div class="card-body py-3">
+            <div>
+              <div>
+                <p class="card-text pb-4">
+                  “Check in progress to board d the bus was organized”
+                  <a class="me-3 fw-bold" href="##" (click)="triggerModal(modalData)"
+                    >See review</a
+                  >
+                </p>
+
+                <ng-template #modalData let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title fs-4 pt-3" id="modal-basic-title">
+                      Excellent tour,great value for...
+                    </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <strong>
+                        <div>
+                          <i class="fa-solid fa-star stars"></i>
+                          <i class="fa-solid fa-star stars"></i>
+                          <i class="fa-solid fa-star stars"> </i
+                          ><i class="fa-solid fa-star stars"></i>
+                          <i class="fa-regular fa-star stars"></i>
+                          <span class="UserFeedName ps-2">Sara Nate</span>
+                        </div>
+                      </strong
+                      >
+                    </p>
+   
+                    <p>
+                      Excellent tour,great value for money,tour guide good lots of knowledge,
+                       plenty of good photo stops and lunch.the Roman amphitheater of Kom El-Deka was my favourite
+                        we travelled through all the different neighbourhoods,Highly recommended tour 
+                        and Travel Trust first class.All pick up points easy to get too.
+                         
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      (click)="modal.close('Save click')"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </ng-template>
+              </div>
+              <div>
+                <p class="card-text">
+                  “This trip is good wheelchair accesible if you are capable to
+                  get out of your chair”
+                  <a class="me-3 fw-bold" href="#" (click)="triggerModal(modalData)"
+                    >See review</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

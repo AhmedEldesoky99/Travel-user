@@ -1,0 +1,48 @@
+<!---------------- Tour Card Start---------------- -->
+
+<div class="tour-card">
+  <div class="favourite">
+    <i class="fa-solid fa-heart"></i>
+  </div>
+  <div class="tour-card-img">
+    <img class="w-100" src="{{ tourCard?.photos[0]?.url }}" alt="" />
+  </div>
+  <div class="profile">
+    <img
+      src="../../../../assets/Images/admin profile/istockphoto-1337144146-170667a.jpg"
+      alt=""
+    />
+  </div>
+
+  <div class="tour-card-details">
+    <div>
+      <p class="text-capitalize">
+        {{ tourCard.location }} | {{ tourCard.duration }} days
+      </p>
+      <p class="tourCard-price">
+        <span class="fw-bold">{{ tourCard.person_cost }}</span> per person
+      </p>
+
+      <h4 class="fw-bold text-capitalize">{{ tourCard.title }}</h4>
+      <div class="gb">
+        <div>
+          <a
+            class="btn btn-subscribe fw-bold"
+            routerLink="/tourDetails/{{ tourCard._id }}"
+            >Details</a
+          >
+        </div>
+        <div class="tourCard-review">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <span> (27,003)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------- Tour Card End---------------- -->

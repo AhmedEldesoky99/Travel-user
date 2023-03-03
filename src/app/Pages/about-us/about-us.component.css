@@ -1,0 +1,105 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Manrope:wght@300&family=Poppins:wght@300&display=swap');
+
+ /* :root {
+    Hager variables
+    --fontFamily : "Inter";
+    --fs-xl:3.8rem;
+    --fs-lg:3rem;
+    --fs-md:1.4rem;
+    --fs-s-md:1.3rem;
+    --pt:8rem;
+    --pt-s:4rem;
+    --pt-xs:2rem;
+    --white-color:#fff;
+    --light-gray:#3c3a3a;
+    --baby-blue :#009EB7;
+    --baby-blue-hover :#048599;
+    --full-viewPort :100vh;
+    --text-captalized: capitalize;
+    --text-centered: center;
+  } */
+/* Variable decelrations */
+html {
+    scroll-behavior: smooth;
+    font-size:16px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******** mediaQuires *****
+/*mobile screen*/
+/* less than 768px */
+/* @media(max-width:768px)
+{
+    #aboutUs .container
+    {
+        grid-template-columns: 1fr ; 
+
+    }
+    .aboutUs__title {
+        --fs-lg:3rem;
+        font-size: var(--fs-lg);
+    }
+    .aboutUs_Responsive {
+        margin: 1rem;
+    }
+    .numberSection__flex{
+        padding: var(--pt-s) ;
+        --pt-s:4rem;
+    }
+    .about__card {
+        width:70%;
+        --pt-xs:2rem;
+        padding-top: var(--pt-xs);
+    }
+    #aboutUs__whyBook {
+        gap : 0 !important;
+    }
+    .row__responsive {
+        justify-content: center;
+    }
+} */
+
+/*ipad screen*/
+/* more than 769px and less than 992px */
+/* @media(min-width:769px) and (max-width:992px)
+{
+    #aboutUs .container    {
+        grid-template-columns: 1fr 1fr ; 
+    }
+    .aboutUs__title {
+        --fs-lg:3rem;
+        font-size: var(--fs-lg);
+    }
+    .aboutUs_Responsive {
+        padding: var(--pt-s) ;
+        padding:  var(--pt-s);
+    }
+    .about__card {
+        width:80%;
+        --pt-xs:2rem;
+        padding-top: var(--pt-xs);
+    }
+    #aboutUs__whyBook {
+        gap : 0 !important;
+    }
+    
+}  */
+
+
+/*large screen as laptop*/
+/* 
+ @media(min-width:1201px)
+{
+    
+} 
+  */

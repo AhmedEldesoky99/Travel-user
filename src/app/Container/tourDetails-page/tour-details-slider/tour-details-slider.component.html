@@ -1,0 +1,19 @@
+<section id="tourDetailsHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 order-md-1 order-sm-2  mt-4">
+        <div class="mb-3 text-center">
+          <h2 class="tourDetail_title fw-bold mt-5">
+            <!-- {{tourDetails.title}} -->
+          </h2>
+        </div>
+        <app-tour-slider [tourDetails]="tourDetails" ></app-tour-slider>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12 order-md-2  order-sm-1 mt-4">
+        <div class="mb-3 text-center">
+        </div>
+        <app-book-now-card [tourDetails]="tourDetails"></app-book-now-card>
+      </div>
+    </div>
+  </div>
+</section>

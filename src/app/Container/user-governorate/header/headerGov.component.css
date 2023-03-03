@@ -1,0 +1,42 @@
+.headerGov-text {
+  margin-top: 4rem;
+}
+
+.governorate-img {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../../assets/Images/global-governorate/fd.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 16rem;
+}
+.governorate-header {
+  position: relative;
+}
+
+.governorate-card {
+  position: absolute;
+  top: 32rem;
+  background-color: white;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-left: 4rem;
+  font-family: "Inter";
+}
+
+@media (max-width: 991px) {
+  .governorate-img {
+    padding: 10rem;
+  }
+  .governorate-card {
+    width: 60%;
+    top: 20rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .governorate-card {
+    width: 60%;
+  }
+}

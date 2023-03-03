@@ -1,0 +1,25 @@
+<div id="userProfileCards">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-outline-info my-4 text-capitalize"
+          (click)="collapse.toggle()"
+          [attr.aria-expanded]="!isCollapsed"
+          aria-controls="collapseExample"
+        >
+          your favourites
+        </button>
+  
+      </div>
+    </div>
+    <div class="row"    #collapse="ngbCollapse"
+    [(ngbCollapse)]="isCollapsed"
+    [horizontal]="true">
+      <div *ngFor="let tourCard of tourCards" class="col-lg-4 col-md-6 col-sm-12">
+        <app-tour-card [tourCard]="tourCard"></app-tour-card>
+      </div>
+    </div>
+  </div>
+</div>

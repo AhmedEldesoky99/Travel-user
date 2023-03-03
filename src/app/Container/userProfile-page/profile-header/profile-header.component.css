@@ -1,0 +1,79 @@
+/* :root {
+    Hager variables
+    --fontFamily : "Inter";
+    --fs-xl:3.8rem;
+    --fs-lg:3rem;
+    --fs-md:1.4rem;
+    --fs-s-md:1.3rem;
+    --pt:8rem;
+    --pt-s:4rem;
+    --pt-xs:2rem;
+    --white-color:#fff;
+    --light-gray:#3c3a3a;
+    --baby-blue :#009EB7;
+    --baby-blue-hover :#048599;
+    --full-viewPort :100vh;
+    --text-captalized: capitalize;
+    --text-centered: center;
+  } */
+#userProfileHeader {
+  --white-color: #fff;
+  --light-gray: #3c3a3a;
+  --baby-blue: #009eb7;
+  --baby-blue-hover: #048599;
+}
+
+.userProfileBg {
+  /* background-image: url(../../../../assets/Images/userProfile/dhab.jpg); */
+  background-size: cover;
+  min-height: 43vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-color: #464646; */
+  position: relative;
+}
+
+.userProfile__img img {
+  translate: 115px -86px;
+  width: 150px;
+  height: 150px;
+  left: 5.6rem;
+  top: -4.4rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.aboutMeTitle {
+  background-color: #fff !important;
+}
+
+.profileCard {
+  top: 34%;
+  translate: 0 -60px;
+}
+.aboutCard {
+  padding: 0.7rem 0 !important;
+}
+.nameTitle {
+  margin-top: -78px;
+}
+.Contact__btn {
+  background-color: var(--yellow-color) !important;
+  border: 1px solid var(--yellow-color);
+}
+.Contact__btn:hover {
+  background-color: var(--baby-blue) !important;
+  border: 1px solid var(--baby-blue);
+}
+
+@media (max-width: 769px) {
+  .userProfile__img img {
+    translate: 250px -86px;
+  }
+}
+@media (max-width: 412px) {
+  .userProfile__img img {
+    translate: 90px -86px;
+  }
+}

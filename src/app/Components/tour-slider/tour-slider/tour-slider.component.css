@@ -1,0 +1,22 @@
+
+/* Hager variables
+--fontFamily : "Inter";
+--fs-xl:3.8rem;
+--fs-lg:3rem;
+--fs-md:1.4rem;
+--fs-s-md:1.3rem;
+--pt:8rem;
+--pt-s:4rem;
+--pt-xs:2rem;
+--white-color:#fff;
+--light-gray:#3c3a3a;
+--baby-blue :#009EB7;
+--baby-blue-hover :#048599;
+--full-viewPort :100vh;
+--text-captalized: capitalize;
+--text-centered: center; */
+.carousel {
+    border-radius: 4%;
+    overflow: hidden;
+}
+

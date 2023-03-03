@@ -1,0 +1,45 @@
+<!-- ***************Start Home Section****************** -->
+<section id="header">
+  <div
+    class="container d-flex justify-content-center align-items-center vh-100 "
+    id="top"
+  >
+    <div class="row">
+      <div class="col">
+        <div class="home-caption">
+          <div class="home-title text-white text-center" >
+            <h1>Private Tours And Local Tours Guides</h1>
+            <p>
+              Connect with local tour guides and enjoy private tours from all
+              over the world<br />request an itinerary and customize your tour
+            </p>
+          </div>
+          <div class="home-search position-relative">
+            <!-- --------- search --------- -->
+
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Where to?"
+              list="cities"
+              name="slt_usernames"
+              [(ngModel)]="cityValue"
+              (change)="cityCode($event)"
+            />
+            <datalist id="cities">
+              <option *ngFor="let city of cities" [value]="city">
+                {{ city }}
+              </option>
+            </datalist>
+            <a routerLink="eachGov/{{ cityValue }}">
+              <button class="btn text-white btn-danger" [disabled]="isdisabled">
+                search
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ***************End Home Section****************** -->

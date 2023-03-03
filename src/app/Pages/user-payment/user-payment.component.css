@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+p{
+  margin-bottom: 0.5rem;
+}
+.payfull-option {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.payPart-option {
+  padding: 1rem;
+  /* padding-bottom: 1.5rem; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.chooseHowToPaY p {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+/* .chooseHowToPaY .payPart-option h5{
+  width: 80%;
+}
+.chooseHowToPaY .payPart-option p {
+  width: 50%;
+} */
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  border: 6px solid black;
+}
+
+.method {
+  border: 1px solid var(--gray-color);
+}
+.paymeTable {
+  overflow: hidden;
+  border-radius: 1rem !important;
+}
+.no-border {
+  border: 0;
+  box-shadow: none;
+}
+
+#countries {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: var(--gray-color);
+}
+
+a {
+  color: black;
+}
+.notes {
+  display: flex;
+  justify-content: space-around;
+}
+.notes i {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.notes p:first-of-type {
+  font-size: 18px;
+  font-weight: 600;
+}
+.btn-request {
+  margin-top: 10px;
+  background-color: #009eb7;
+  width: 60%;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+}
+/*-------------- payment card -------------*/
+.payment-card {
+  box-sizing: border-box;
+  border: 1px solid #d0cfcf;
+  border-radius: 15px;
+  padding: 16px;
+  font-family: "Inter";
+  position: sticky;
+  top: 10%;
+}
+/* .payment-card-tourDetails {
+  display: flex;
+  justify-content: space-between;
+} */
+/* .payment-card-img {
+  width: 50%;
+} */
+/* .payment-card-img img {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+} */
+.payment-card-tourDetails p{
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+.payment-card-priceDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-card-priceTotal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+/* @media(min-width:993px) and (max-width:1200px){
+
+}
+
+@media(min-width:769px) and (max-width:992px){
+
+}
+
+@media(max-width:768px){
+
+} */

@@ -1,0 +1,53 @@
+/*************aboutUs__numberSection*****************/
+#aboutUs__numberSection {
+    min-height: 40vh;
+    --fontFamily : "Inter";
+    --text-captalized: capitalize;
+    --fs-lg:3rem;
+
+
+}
+.numberSection__flex {
+    min-height: 40vh;
+    font-family: var(--fontFamily);
+    text-transform: var(--text-captalized);
+    --baby-blue :#009EB7;
+
+}
+.numberSection__flex span {
+    color : var(--baby-blue);
+}
+.num {
+    font-size: var(--fs-lg);
+
+}
+/******************************/
+
+/********* mediaQuires ******/
+/*mobile screen*/
+/* less than 768px */
+@media(max-width:768px)
+{
+    
+    .aboutUs_Responsive {
+        margin: 1rem;
+    }
+    .numberSection__flex{
+        padding: var(--pt-s) ;
+        --pt-s:4rem;
+    }
+    
+}
+
+/*ipad screen*/
+/* more than 769px and less than 992px */
+@media(min-width:769px) and (max-width:992px)
+{
+    
+    .aboutUs_Responsive {
+        padding: var(--pt-s) ;
+        padding:  var(--pt-s);
+    }
+    
+    
+}

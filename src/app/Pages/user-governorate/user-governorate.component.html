@@ -1,0 +1,22 @@
+<section id="governorate">
+  <app-headerGov></app-headerGov>
+</section>
+<section id="tour-cards mt-5">
+  <div class="container mt-5">
+    <div class="row tour-cards">
+      <!-- /*-------------- tour card -------------*/ -->
+      <div *ngFor="let tourCard of tourCards?.data" class="col-lg-4 col-md-6">
+        <a routerLink="/tourDetails/{{ tourCard._id }}">
+          <app-tour-card [tourCard]="tourCard"></app-tour-card>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">
+    <img
+      *ngIf="isLoading"
+      src="../../../../assets/Images/loading/Spinner-1.5s-200px.svg"
+      alt=""
+    />
+  </div>
+</section>

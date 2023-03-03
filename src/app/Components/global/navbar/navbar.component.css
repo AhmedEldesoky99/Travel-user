@@ -1,0 +1,94 @@
+.logo {
+  width: 100px;
+}
+
+nav {
+  background-color: #69677397 !important;
+  z-index: 9999;
+}
+
+/* .container-fluid{
+  margin-bottom: -10px;
+} */
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+  left: -114px;
+}
+
+.dropdownItem {
+  color: black;
+}
+
+ul,
+li {
+  text-decoration: none;
+}
+
+nav a,
+button {
+  color: var(--white-color);
+}
+
+nav a:hover,
+button:hover,
+.nav-link {
+  color: var(--yellow-color);
+}
+
+.counter {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: var(--red-color);
+  translate: 23px -37px;
+  color: white;
+  font-size:10px;
+}
+
+.icons li{
+  margin-right:10px;
+}
+
+/* .profile-circle {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+}
+.fa-cart-shopping:before,
+.fa-shopping-cart:before {
+  content: "\f07a";
+  font-size: 24px;
+}
+.fa-stack[data-count]:after {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  content: attr(data-count);
+  font-size: 40%;
+  padding: 0.6em;
+  border-radius: 999px;
+  line-height: 0.4em;
+  color: white;
+  color: DF0000;
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+  background: white;
+  border-style: solid;
+}
+.fa-circle {
+  color: #df0000;
+  font-size: 50px;
+}
+
+.red-cart {
+  color: #df0000;
+  background: white;
+  font-size: 80%;
+} */
+
+.logo img {
+  width: 15%;
+}

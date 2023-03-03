@@ -1,0 +1,82 @@
+<section id="login">
+  <div class="container">
+    <div class="row justify-content-evenly flex-md-row flex-column-reverse">
+      <div class="col-lg-5 col-md-12 mt-5">
+        <div class="mb-3 mt-4">
+          <h3 class="text-center">Welcome</h3>
+        </div>
+
+        <div>
+          <form [formGroup]="validationForm">
+            <div class="mb-3">
+              <input
+                formControlName="email"
+                type="email"
+                class="form-control"
+                aria-describedby="emailHelp"
+                placeholder="Example@mail.com"
+                value=""
+              />
+
+              <div
+                *ngIf="
+                  !flag || (!emailValid && this.validationForm.value['email'])
+                "
+                class="alert alert-danger my-1"
+                role="alert"
+              >
+                Wrong email format
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <input
+                formControlName="password"
+                type="password"
+                class="form-control"
+                placeholder="Enter Your Password"
+              />
+              <div
+                *ngIf="
+                  !flag ||
+                  (!passwordValid && this.validationForm.value['password'])
+                "
+                class="alert alert-danger my-1"
+                role="alert"
+              >
+                Weak password
+              </div>
+            </div>
+            <a routerLink="/"
+              ><input
+                type="submit"
+                class="btn btn-dark w-100 my-3"
+                value="Login"
+                (click)="login()"
+            /></a>
+
+            <div class="mt-2">
+              <p class="form-parg text-center">Or</p>
+            </div>
+
+            <div class="text-center">
+              <span
+                >Don't have an account? <a routerLink="/signUp">Signup</a></span
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-5 d-flex mb-3">
+        <div class="login-img d-flex">
+          <img
+            src="../../../assets/Images/login/Login.png"
+            class="w-100"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
