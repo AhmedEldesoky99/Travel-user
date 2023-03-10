@@ -44,7 +44,7 @@ export class ProfileHeaderComponent implements OnInit {
   }
   ngOnInit(): void {
     this.userId = localStorage.getItem('id');
-
+   
     //get userby id
     this.getUserData();
   }

@@ -20,11 +20,11 @@ export class CommentsComponent implements OnInit {
   ID: any;
   commentValue: any;
   comment: { content: any; rating: any; title: any } | any;
-  newComments: [] | any;
-  commentId: any;
+  newComment: [] | any;
 
   logInStatus = this.authService.checkLogin();
   userId = localStorage.getItem('id');
+  profilePhoto = localStorage.getItem('profilePhoto');
 
   constructor(
     myActivated: ActivatedRoute,
@@ -36,7 +36,9 @@ export class CommentsComponent implements OnInit {
     console.log(this.ID);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.profilePhoto);
+  }
 
   //--------- add Comment ---------
   addComment() {
@@ -45,12 +47,13 @@ export class CommentsComponent implements OnInit {
       content: this.commentValue,
       rating: 5,
     };
-    console.log(this.commentValue);
+    // console.log(this.commentValue);
     console.log(this.comment);
 
     this.commmentService.createComment(this.ID, this.comment).subscribe({
       next: (res: any) => {
-        this.newComments = res.data;
+        this.newComment = res.data;
+        console.log(this.newComment.user);
       },
       error: (err) => {
         Swal.fire({
@@ -64,8 +67,10 @@ export class CommentsComponent implements OnInit {
   }
 
   //--------- delete Comment ---------
-  deleteComment() {
-    this.commmentService.deleteCommentById(this.ID, this.userId).subscribe({
+  deleteComment(commentID: any) {
+    console.log(commentID);
+
+    this.commmentService.deleteCommentById(commentID).subscribe({
       next: (res: any) => {
         this.comments.splice(this.comments.indexOf(res.data), 1);
       },
