@@ -14,6 +14,13 @@ export class TourService {
     return this.myHttp.get(baseUrl);
   }
 
+
+
+ // get tours limit 
+  getToursLimit(limit: number) {
+    return this.myHttp.get(`${this.baseUrl}?limit=${limit}`);
+  }
+
   //get tour by id
   getTourById(id: any) {
     return this.myHttp.get(`${this.baseUrl}/${id}`);

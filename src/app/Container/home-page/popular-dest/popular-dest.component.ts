@@ -12,7 +12,7 @@ import { TourService } from 'src/app/services/tour.service';
 })
 export class PopularDestComponent implements OnInit {
   // ---------
-  private baseUrl = 'https://travel-8ztv.onrender.com/v1/tours';
+ 
   isLoading = true;
   tourCards: [] | any;
 
@@ -21,7 +21,7 @@ export class PopularDestComponent implements OnInit {
   //calling API
   ngOnInit(): void {
     //--------- get Tours ---------
-    this.tourService.getTours(this.baseUrl).subscribe({
+    this.tourService.getToursLimit(6).subscribe({
       next: (res) => {
         console.log(res);
         this.tourCards = res;

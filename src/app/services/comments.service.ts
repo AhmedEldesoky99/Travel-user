@@ -8,11 +8,12 @@ export class CommentsService {
   constructor(private myHttp: HttpClient) {}
 
   private baseUrl = 'https://travel-8ztv.onrender.com/v1/comments';
+
   token = localStorage.getItem('token');
 
   //get all comments
   getComments(tourId: any) {
-    return this.myHttp.get(`${this.baseUrl}/${tourId}`);
+    return this.myHttp.get(`${this.baseUrl}/tour/${tourId}`);
   }
 
   //create comment
@@ -24,17 +25,19 @@ export class CommentsService {
     });
   }
 
+  //delete Comment By Id
+  deleteCommentById(commentId: any) {
+    const head = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
+    return this.myHttp.delete(`${this.baseUrl}/${commentId}`, {
+      headers: head,
+    });
+  }
+
+  
+
   //get Comment By Id
   getCommentById(tourId: any, userId: any) {
     return this.myHttp.get(`${this.baseUrl}/${tourId}/${userId}`);
-  }
-
-  //delete Comment By Id
-  deleteCommentById(tourId: any, userId: any) {
-    const head = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
-    return this.myHttp.delete(`${this.baseUrl}/${tourId}/${userId}`, {
-      headers: head,
-    });
   }
 
   //update Comment By Id

@@ -27,11 +27,16 @@
               <p class="be-comment-text">
                 {{ comment?.content }}
               </p>
-              <span class="delete"
-                (click)="deleteComment()"
+
+              <span
+                class="delete"
+                (click)="deleteComment(comment?._id)"
                 *ngIf="authService.isAuth || logInStatus"
                 >delete</span
               >
+
+              <!-- || userId == newComment?.user -->
+              <!-- <ng-template #trueblock></ng-template> -->
             </div>
           </div>
 
