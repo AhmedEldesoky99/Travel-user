@@ -19,6 +19,7 @@ export class CommentsService {
   //create comment
   createComment(tourId: any, comment: any) {
     const head = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
+console.log(this.token);
 
     return this.myHttp.post(`${this.baseUrl}/${tourId}`, comment, {
       headers: head,

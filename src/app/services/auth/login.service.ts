@@ -21,7 +21,7 @@ export class LoginService {
   logout() {
     this.isAuth = false;
     localStorage.removeItem('token');
-    localStorage.removeItem('id');
+    localStorage.removeItem('userData');
     //name -image - email
     this.route.navigate(['']);
   }

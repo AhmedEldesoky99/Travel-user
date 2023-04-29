@@ -38,7 +38,8 @@ export class TourDetailsComponent implements OnInit {
     //--------- get Tour By Id ---------
     this.tourService.getTourById(this.ID).subscribe({
       next: (res: any) => {
-        this.tourDetails = res.data;
+        this.tourDetails = res.data.tour;
+console.log(this.tourDetails);
 
         this.photos = this.tourDetails.photos;
         this.foodPhotos = this.tourDetails.expected_photos;

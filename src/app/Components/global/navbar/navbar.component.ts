@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
 import { LoginService } from 'src/app/services/auth/login.service';
+import { UserService } from 'src/app/services/User.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,19 +10,34 @@ import { LoginService } from 'src/app/services/auth/login.service';
 })
 export class NavbarComponent implements OnInit {
   logInStatus = this.authService.checkLogin();
-  addedTours = localStorage.getItem('ctour');
-  cartItems: any = 0;
+  InCartCount: number = 0;
+  cartItems: any;
+  user: any;
+  userProfilePhoto: string | undefined;
+  constructor(
+    public authService: LoginService,
+    private userService: UserService
+  ) {}
 
-  constructor(public authService: LoginService) {
-    console.log(localStorage.getItem('ctour'));
-    localStorage.setItem('cartItems', this.cartItems);
+  ngOnInit(): void {
+    // this.userService.userSubject.subscribe({
+    //   next: (res) => console.log('userSubject', res),
+    // });
+
+    // console.log('////////   ', this.userService);
+
+    this.userService.user$
+      .pipe(
+        tap((user) => {
+          console.log('//////// userSubject tab', user);
+          const cartItems = user?.cart?.tours;
+          this.InCartCount = cartItems.length;
+        })
+      )
+      .subscribe({
+        next: (res) => console.log('////////// userSubject subscribe', res),
+      });
   }
-  //img=localStorage.getItem("id")
-  // tour:any;
-
-  // toursNumber=this.addedTours?.tours?.length;
-
-  ngOnInit(): void {}
   logOut() {
     this.authService.logout();
     window.location.reload();

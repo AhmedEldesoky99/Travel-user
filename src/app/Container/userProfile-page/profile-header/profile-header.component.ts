@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
   templateUrl: './profile-header.component.html',
   styleUrls: ['./profile-header.component.css'],
 })
-
 export class ProfileHeaderComponent implements OnInit {
   flag: boolean = true;
 
@@ -33,6 +32,13 @@ export class ProfileHeaderComponent implements OnInit {
     private modalService: NgbModal
   ) {}
 
+  ngOnInit(): void {
+    this.userId = "6411c693305cd845f0217940"
+
+    //get userby id
+    this.getUserData();
+  }
+
   getUserData() {
     this.userService.getUserById(this.userId).subscribe({
       next: (res: any) => {
@@ -41,12 +47,6 @@ export class ProfileHeaderComponent implements OnInit {
       },
       error: (err) => {},
     });
-  }
-  ngOnInit(): void {
-    this.userId = localStorage.getItem('id');
-   
-    //get userby id
-    this.getUserData();
   }
 
   validationForm = new FormGroup({

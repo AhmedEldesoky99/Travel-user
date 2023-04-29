@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Tour } from 'src/app/models/tourModel';
+import { User } from 'src/app/models/UserModel';
+import { UserService } from 'src/app/services/User.service';
 import Swal from 'sweetalert2';
 import { LoginService } from './../../services/auth/login.service';
 
@@ -11,7 +14,10 @@ import { LoginService } from './../../services/auth/login.service';
 export class UserLoginComponent implements OnInit {
   flag: boolean;
 
-  constructor(private loginService: LoginService) {
+  constructor(
+    private loginService: LoginService,
+    private userService: UserService
+  ) {
     this.flag = true;
   }
 
@@ -26,18 +32,16 @@ export class UserLoginComponent implements OnInit {
   });
 
   login() {
+    let userData: User;
     if (this.validationForm.valid) {
       this.flag = true;
       this.loginService.loginUser(this.validationForm.value).subscribe({
         next: (res: any) => {
-          console.log(res);
-          //image - name - email
+          console.log(res); //user
+          userData = res.data.userBody;
           localStorage.setItem('token', res.data.access_token);
-          localStorage.setItem('id', res.data.userBody._id);
-          localStorage.setItem('profileName', res.data.userBody.username);
-          localStorage.setItem('profilePhoto', res.data.userBody.photo);
-          localStorage.setItem('email', res.data.userBody.email);
-          localStorage.setItem('phone', res.data.userBody.phone);
+          console.log(localStorage.getItem('token'));
+          localStorage.setItem('userData', JSON.stringify(res.data.userBody));
 
           Swal.fire('Good job!', 'You are logged in !', 'success');
         },
@@ -50,12 +54,12 @@ export class UserLoginComponent implements OnInit {
           });
         },
       });
-      console.log(this.validationForm);
     } else {
       this.flag = false;
       console.log('Invalid Inputs');
       console.log(this.validationForm);
     }
+    console.log(localStorage.getItem('token'));
   }
 
   get emailValid() {

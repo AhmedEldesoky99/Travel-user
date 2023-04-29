@@ -17,6 +17,7 @@ export class UpdateUserService {
   // update user by id
   updateUser(user: any) {
     const head = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
+    console.log(this.token);
 
     return this.myHttp.patch(this.baseUrl, user, {
       headers: head,

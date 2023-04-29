@@ -81,3 +81,12 @@
 }
 
 /*-------------- end of Review Order card -------------*/
+
+.cartEmpty img {
+  width: 20%;
+}
+
+.ExploreTours {
+  background-color: var(--blue-color);
+  color: white;
+}

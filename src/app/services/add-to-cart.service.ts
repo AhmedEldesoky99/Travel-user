@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AddToCartService {
+  addedTours$: any;
   constructor(private myHttp: HttpClient) {}
   private baseUrl = 'https://travel-8ztv.onrender.com/v1/cart';
   token = localStorage.getItem('token');
@@ -17,6 +18,18 @@ export class AddToCartService {
     return this.myHttp.post(
       `${this.baseUrl}/${tourId}`,
       { subscriber_number },
+      {
+        headers: head,
+      }
+    );
+  }
+
+  //delete from cart
+  deleteFromCart(tourId: any) {
+    const head = new HttpHeaders().set('Authorization', 'Bearer ' + this.token);
+
+    return this.myHttp.delete(
+      `${this.baseUrl}/${tourId}`,
       {
         headers: head,
       }

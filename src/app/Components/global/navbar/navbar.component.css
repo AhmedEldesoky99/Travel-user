@@ -50,6 +50,21 @@ button:hover,
   margin-right:10px;
 }
 
+.profile img {
+  /* position: absolute; */
+  /* left: 73.42%;
+  right: 4.77%;
+  top: 50%;
+  bottom: 31.82%; */
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: aqua;
+  object-fit: cover;
+  margin-left: 5px;
+}
+
 /* .profile-circle {
   border-radius: 50%;
   border: 1px solid white;

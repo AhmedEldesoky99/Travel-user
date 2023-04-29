@@ -11,19 +11,17 @@
   margin-bottom: 0px;
 }
 
-
-
 .tour-card-img {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  object-fit: cover;
+  object-fit: none;
   width: 100%;
 }
 
 .tour-card img {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  object-fit: cover;
+  object-fit: none;
   width: 100%;
 }
 

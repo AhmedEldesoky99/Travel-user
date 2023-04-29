@@ -29,9 +29,8 @@
                     style="padding: 6px"
                     required
                     disabled
-                    
+                    value="Date: {{ tourDetails?.start_date.split('T')[0] }}"
                   />
-                  <!-- value="Date: {{ tourDetails?.start_date.split('T')[0] }}" -->
                   <input
                     type="text"
                     class="mb-2 py-2 mb-3"
@@ -39,9 +38,8 @@
                     style="padding: 6px"
                     required
                     disabled
-                    
+                    value="Time: {{ tourDetails?.start_date.split('T')[1] }}"
                   />
-                  <!-- value="Time: {{ tourDetails?.start_date.split('T')[1] }}" -->
                   <input
                     type="number"
                     class="mb-4 py-2 mb-3"
@@ -50,7 +48,7 @@
                     style="padding: 6px"
                     required
                     value="1"
-                    [(ngModel)]="adultsCountNum"
+                    [(ngModel)]="subscriber_number"
                   />
                 </div>
               </form>
@@ -59,8 +57,8 @@
                 <div class="mt-4">
                   <span
                     class="btn btn-outline-primary mb-2 addToCart_btn w-100 text-capitalize fw-bold"
-                    (click)="addTourToCart()"
-                    >add to cart</span
+                    (click)="toggleCart()"
+                    >{{ inCart ? "Remove from cart" : "Add to cart" }}</span
                   >
                 </div>
                 <div>

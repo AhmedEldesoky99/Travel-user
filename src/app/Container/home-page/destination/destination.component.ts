@@ -55,23 +55,5 @@ export class DestinationComponent implements OnInit {
         });
       },
     });
-
-    //--------- get Tours ---------
-    this.tourService.getTours(this.baseUrl).subscribe({
-      next: (res) => {
-        console.log(res);
-        this.tourCards = res;
-        this.isLoading = false;
-      },
-      error: (err) => {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-          footer: 'please refresh the website',
-        });
-      },
-    });
   }
-
 }

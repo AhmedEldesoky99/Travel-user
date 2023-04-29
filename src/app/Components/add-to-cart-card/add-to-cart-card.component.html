@@ -1,19 +1,25 @@
 <div class="addToCart-card">
   <div class="addToCart-card-img">
-    <img src="{{ addtour.data?.photos[0]?.url }}" class="w-100" alt="" />
+    <img src="{{ addtour.data?.tour?.photos[0]?.url }}" class="w-100" alt="" />
   </div>
   <div class="addToCart-card-details">
     <div class="addToCart-card-details-price">
-      <p class="person">{{adultsCountNum}} persons X {{ addtour?.data?.person_cost }} EGP</p>
-      <p class="price fw-bold">{{ addtour?.data?.person_cost }}</p>
+      <p class="person">
+        {{ adultsCountNum }} persons X
+        {{ addtour?.data?.tour?.person_cost }} EGP
+      </p>
+      <p class="price fw-bold">{{ addtour?.data?.tour?.person_cost }}</p>
     </div>
 
     <div class="addToCart-card-details-title">
       <div>
-        <h5 class="fw-bold">{{ addtour?.data?.title }}</h5>
+        <h5 class="fw-bold">{{ addtour?.data?.tour?.title }}</h5>
         <p>Thursday,February 9,2023 | 9:00 AM</p>
       </div>
-      <div class="addToCart-card-details-deleteIcon">
+      <div
+        (click)="deleteTourFromCart(addtour?.cart?.tours?.id)"
+        class="addToCart-card-details-deleteIcon"
+      >
         <i class="fa-regular fa-trash-can"></i>
       </div>
     </div>
